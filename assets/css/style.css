@@ -1,0 +1,231 @@
+@font-face {
+  font-family: Garamond;
+  src: url("../fonts/CormorantGaramond-Medium.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Color-text: #333333;
+  --Color-bGround: #e9e9e0;
+}
+
+html {
+  font-family: Garamond;
+  color: var(--Color-text);
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--Color-bGround);
+  margin: 0 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4.5rem;
+  margin-bottom: 20px;
+}
+
+/* - header styling */
+
+header {
+  display: flex;
+  padding: 10px 0;
+  border-top: 5px solid var(--Color-text);
+  border-bottom: 5px solid var(--Color-text);
+  font-size: 1.6rem;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+
+/* - headline */
+
+.headline {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* - h3 headline */
+
+.headline h3 {
+  margin-right: 60px;
+}
+
+/* -  h2 styling */
+
+main h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-left: 5vw;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+/* - main content flex */
+
+.content,
+.wrapper {
+  display: flex;
+}
+
+/* - section grid */
+
+.multiple-articles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 5px;
+  height: 80vh;
+  overflow-y: auto;
+  width: fit-content;
+  overflow-x: hidden;
+}
+
+/* - article styling */
+
+.multiple-articles article {
+  font-size: 2.4rem;
+  margin-bottom: 7px;
+  width: 280px;
+  height: 85%;
+  margin-top: 20px;
+  display: inline-block;
+}
+.multiple-articles article:hover {
+  cursor: pointer;
+}
+
+.multiple-articles article p {
+  font-size: 1.6rem;
+}
+
+/* - image styling & content  */
+
+.img-content p {
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 400;
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+
+.img-content {
+  width: 30vw;
+}
+
+.img-content article {
+  margin: 0 10px;
+  font-size: x-large;
+}
+
+.img-div {
+  background: url("../img/288cd999883384c73b029551d877ca00.jpeg") no-repeat
+    center;
+  background-size: contain;
+  height: 50vh;
+  width: 27vw;
+  margin: 0 20px;
+  cursor: pointer;
+  /* margin-top: 10px; */
+  transition: 0.5s ease-in-out;
+}
+
+/* - aside styling undso */
+
+.sponsor-section article,
+.img-content article {
+  border: 5px solid #333;
+  padding: 15px 15px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* - h3 styling */
+
+#sponsor {
+  font-size: 20px;
+  font-weight: 700px;
+  text-align: center;
+}
+
+/* - aside 1st box */
+
+.sponsor-section article:nth-of-type(1) h3 {
+  font-size: 5rem;
+  width: 220px;
+  display: inline-block;
+}
+
+/* - aside 2nd box */
+
+.sponsor-section article:nth-of-type(2) {
+  font-size: 2.4rem;
+}
+
+.sponsor-section article:nth-of-type(2) p {
+  font-size: 1.6rem;
+}
+.sponsor-section article:nth-of-type(2) a {
+  border-bottom: 1px solid #737b80;
+  padding-bottom: 2px;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #737b80;
+}
+
+/* - aside 3rd box */
+
+.ikea-logo {
+  background: url("../img/2fe1560847e317077c0fe3b557d404ce.png") no-repeat
+    center;
+
+  background-size: contain;
+  height: 200px;
+}
+
+@media only screen and (max-width: 768px) {
+  .content,
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .img-content {
+    height: 100vh;
+    margin-bottom: 300px;
+  }
+
+  .img-div {
+    width: 600px;
+  }
+
+  .headline h3 {
+    position: absolute;
+    left: 260px;
+    top: 1800px;
+  }
+}
+
+@media only screen and (min-width: 1470px) {
+  .sponsor-section article {
+    width: 300px;
+    margin-left: 50px;
+  }
+
+  .img-div {
+    width: 600px;
+    height: 25vh;
+  }
+
+  .multiple-articles article {
+    width: 350px;
+    margin-left: 50px;
+  }
+
+  .headline h3 {
+    margin-right: 150px;
+  }
+}
